@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    (function () {
+      var scriptURL = 'bundle.js';
+      if (!window.cryptoButton) {
+        loadScript();
+      }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = initPayment;
+      }
+
+      function initPayment() {
+        cryptoButton.initiatePayment({
+          theme: 'dark',
+          secretToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ImM0YzA5MDAxLjFmNmRiMWExM2Y5OTQ2NmU5NDZjMDhhZDEwYTNkM2NkLjE1NDMzMTQ5MzUyNTMi.T6WsL-mwOkv29zhf4TxqBy5BhHqcls3EzJp2oz1X8kY',
+          redirectURI: 'http://staging.api.ethos.io/api/v1/coin/healthcheck',
+          amount: 100,
+          orderId: 'testOrderId',
+        })
+      }
+    }())
+  </script>
+</head>
+
+<body>
+    <h1>Payment Page</h1><br>
+    <h2>Dark Theme Button</h2><br>
+    <div id='payment-button-container'> </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+button.crypto-btn.theme-dark {
+  background: rgb(41 67 78);
+  border: none;
+  color: #fff;
+}
+
+button.crypto-btn.theme-light {
+  background: inherit;
+  border: 1px solid rgb(41 67 78);
+  color: #000;
+}
+
+button.crypto-btn.theme-light .pay-with-crypto:after {
+  background: #000 !important;
+}
+
+button.crypto-btn {
+  text-align: center;
+  height: 42pt;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+span.pay-with-crypto {
+  position: relative;
+  font-size: 15px;
+  float: left;
+}
+
+span.pay-with-crypto:after {
+  content: ' ';
+  height: 30pt;
+  background: #fff;
+  position: absolute;
+  width: 2px;
+  right: -15px;
+  top: -10px;
+}
+
+div.logo-container img {
+  width: 35%;
+}
+
+div.logo-container {
+  font-size: 12px;
+  float: left;
+  text-align: left;
+}
+
+div.logo-container span:first-child {
+  margin-left: 30px;
+}
+
+button.crypto-btn .ethos-text-container {
+  text-align: left;
+}
+
+div#ethos-button-container {
+  width: 100%;
+  margin: 15px 0;
+  font-size: 12px;
+  max-width: 300pt;
+}
+
+div#ethos-button-container p.error {
+  text-align: center;
+  color: red;
+  margin-top: 5px;
+  font-size: 15px;
+}
